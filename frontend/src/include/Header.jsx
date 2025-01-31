@@ -14,8 +14,10 @@ export default function Header() {
               <Nav.Link href="/test">기초문법</Nav.Link>
 
               <NavDropdown title="설문" id="basic-nav-dropdown">
-                <NavDropdown.Item href="survey/view">설문조사</NavDropdown.Item>
-                <NavDropdown.Item href="survey/summary">
+                <NavDropdown.Item href="/survey/view">
+                  설문조사
+                </NavDropdown.Item>
+                <NavDropdown.Item href="/survey/summary">
                   설문통계
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
