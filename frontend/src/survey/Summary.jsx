@@ -6,7 +6,13 @@ function Summary() {
   //문제 정보
   const [question, setQuestion] = useState([]);
 
+  //설문결과정보
+  const navigate = useNavigate();
+  const [items, setItems] = useState([]);
+
+  //문제정보를 가져오는 함수
   function getQuestion(url) {
+    //비동기 처리방식 ajax,fetch, 엑시오스
     fetch(url)
       .then((response) => {
         return response.json();
@@ -21,10 +27,7 @@ function Summary() {
     getQuestion(url);
   }, []);
 
-  //설문결과정보
-  const navigate = useNavigate();
-  const [items, setItems] = useState([]);
-
+  //통계정보를 가져오는 함수
   function getList(url) {
     fetch(url)
       .then((response) => {
