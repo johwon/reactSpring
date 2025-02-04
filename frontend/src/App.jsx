@@ -17,6 +17,9 @@ import DetailMemo from './memo/DetailMemo';
 import ListGuestbook from './guestbook/ListGuestbook';
 import WriteGuestbook from './guestbook/WriteGuestbook';
 import DetailGuestbook from './guestbook/DetailGuestbook';
+import ListProduct from './shop/ListProduct';
+import WriteProduct from './shop/WriteProduct';
+import DetailProduct from './shop/DetailProduct';
 
 function App() {
   return (
@@ -41,6 +44,14 @@ function App() {
           <Route path='/guestbook' element={<ListGuestbook />} />
           <Route path='/guestbook/write' element={<WriteGuestbook />} />
           <Route path="/guestbook/detail/:product_code" element={<DetailGuestbook />} />
+          {/* 상품 */}
+          <Route path="/product" element={<ListProduct />} /> 
+          <Route path="/product/list" element={<ListProduct />} /> 
+          <Route path="/product/write" element={<WriteProduct />} /> 
+          <Route 
+            path="/product/detail/:product_code" 
+            element={<DetailProduct />} 
+          /> 
         </Routes>
       </BrowserRouter>
     </>
